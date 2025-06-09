@@ -53,29 +53,19 @@
   </style>
 </head>
 <body class="text-gray-800" style="background-image: url('images/Paria1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
- 
-  <!-- Hero Section -->
-  <background srchref: <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-4.fna.fbcdn.net/v/t39.30808-6/470202211_1506700584052615_3224851981050548031_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=5CZ01Q-W41wQ7kNvwHKb0Cf&amp;_nc_oc=AdkfEGPymJtDFLUB11Bod4IFiAYuxFJJI8wsn32HARejwtnkX5g3pnsvGdHgcnATRf8&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-4.fna&amp;_nc_gid=TFEFDqOG-7xEfy3liY_RFw&amp;oh=00_AfJtD1kvHyVtBTyVGxB_lNd7_3Wa0x8luB9EoJj7ZHJMmw&amp;oe=683B57B3">
 
   <!-- Header -->
-  <section class="h-screen flex items-center justify-center text-white" style="background-image: url('images/TheKing.jpg'); background-size: cover; background-position: center;">
-  <div class="bg-black bg-opacity-60 p-10 rounded">
-    <h1 class="text-4xl graffiti text-pink-500 mb-4">Jan Paria INK</h1>
-    <p class="text-lg">Urban stories through graffiti. Emotions. Rebellion. Identity.</p>
-    <a href="#art" class="mt-6 inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded">Explore Art</a>
-  </div>
-</section>
-
-
-    <!-- About Section -->
-  <section id="about" class="container mx-auto px-4 py-16">
-    <h3 class="graffiti text-3xl text-pink-600 mb-6">About Jan</h3>
-    <div class="background srchref: <img data-visualcompletion="media-vc-image" alt="No photo description available." class="x168nmei x13lgxp2 x5pf9jr xo71vjh x1bwycvy x193iq5w x4fas0m x19kjcj4" referrerpolicy="origin-when-cross-origin" src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/470198100_1507441320645208_3055646460759990625_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=YzUNqXS37CMQ7kNvwGHkYt_&amp;_nc_oc=AdlQfO0GpUhE6ir5gx4YTQjzB3GQhYk3I0RRY9C32l67Ek-7h3HJOSmaIcQbxHs1VOA&amp;_nc_zt=23&amp;_nc_ht=scontent.fotp3-2.fna&amp;_nc_gid=guCof9K87Hp-UH9YztaqYA&amp;oh=00_AfIC_B41QAl4gFw8rGpZAvS-bUguf_HUYRtpjg12JKolqg&amp;oe=683B2526">
-      <p>
-        Jan Paria is a German-based graffiti artist known for blending urban chaos with vibrant emotion. He began tagging walls in the early 2000s and evolved into a respected visual storyteller. His work explores the intersection of street culture, politics, and inner landscapes. Every piece is a declaration, a whisper, a riot.
-      </p>
+  <header class="bg-black text-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="graffiti text-3xl text-pink-500">Jan Paria INK</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="#home" class="hover:text-pink-400">Home</a>
+        <a href="#art" class="hover:text-pink-400">Art</a>
+        <a href="#about" class="hover:text-pink-400">About</a>
+        <a href="#contact" class="hover:text-pink-400">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
   <!-- Gallery Section -->
   <section id="art" class="bg-white py-16">
@@ -121,7 +111,6 @@
     </div>
     <img id="lightbox-img" src="" alt="Imagine mărită">
   </div>
-
   <!-- Script pentru funcția de mărire și navigare -->
   <script>
     const zoomableImages = Array.from(document.querySelectorAll('.zoomable'));
@@ -155,30 +144,5 @@
       lightbox.style.display = 'none';
     });
   </script>
-   <!-- Contact Section -->
-  <section id="contact" class="container mx-auto px-4 py-16">
-    <h3 class="graffiti text-3xl text-pink-600 mb-6">Get in Touch</h3>
-    <form class="bg-white shadow-lg rounded-lg p-6 space-y-4 max-w-xl mx-auto">
-      <div>
-        <label class="block text-sm font-semibold">Name</label>
-        <input type="text" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Your name" />
-      </div>
-      <div>
-        <label class="block text-sm font-semibold">Email</label>
-        <input type="email" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="you@example.com" />
-      </div>
-      <div>
-        <label class="block text-sm font-semibold">Message</label>
-        <textarea class="w-full border border-gray-300 rounded px-3 py-2" rows="4" placeholder="Say something..."></textarea>
-      </div>
-      <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded">Send ✉️</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-black text-white text-center py-6 mt-10">
-    <p class="text-sm">&copy; 2025 Jan Paria INK. All rights reserved.</p>
-  </footer>
-
 </body>
 </html>
