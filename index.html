@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jan Paria INK</title>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
 
-  <!-- Custom Font Config -->
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -19,130 +15,109 @@
     .graffiti {
       font-family: 'Permanent Marker', cursive;
     }
-    #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
+    #journal {
       display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      flex-direction: column;
-    }
-    #lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
+      position: fixed;
+      top: 100px;
+      right: 50%;
+      transform: translateX(50%);
+      max-width: 600px;
+      background-color: #fff;
+      border: 5px solid #111;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      z-index: 1000;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background-image: url('images/graffiti-paper.jpg'); /* opțional fundal graffiti */
+      background-size: cover;
       border-radius: 10px;
-      box-shadow: 0 0 30px #000;
-    }
-    .lightbox-controls {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 10px 20px;
-      color: white;
-      font-size: 1.5rem;
-      user-select: none;
-    }
-    .lightbox-controls span {
-      cursor: pointer;
     }
   </style>
 </head>
-<body class="text-gray-800" style="background-image: url('images/Paria1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+<body class="text-white" style="background-image: url('images/TheKing.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
 
   <!-- Header -->
-  <header class="bg-black text-white shadow-md">
+  <header class="bg-black bg-opacity-80 shadow-md fixed w-full z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="graffiti text-3xl text-pink-500">Jan Paria INK</h1>
       <nav class="space-x-6 text-sm">
         <a href="#home" class="hover:text-pink-400">Home</a>
+        <a href="#" onclick="toggleJournal()" class="hover:text-pink-400">About</a>
         <a href="#art" class="hover:text-pink-400">Art</a>
-        <a href="#about" class="hover:text-pink-400">About</a>
         <a href="#contact" class="hover:text-pink-400">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Gallery Section -->
-  <section id="art" class="bg-white py-16">
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center text-center">
+    <div class="bg-black bg-opacity-60 p-10 rounded">
+      <h2 class="graffiti text-5xl text-pink-500 mb-4">Jan Paria INK</h2>
+      <p class="text-lg">Urban stories through graffiti. Emotions. Rebellion. Identity.</p>
+    </div>
+  </section>
+
+  <!-- About Journal Popup -->
+  <div id="journal">
+    <h3 class="graffiti text-2xl text-pink-600 mb-2">About Jan</h3>
+    <p class="text-black">
+      Jan Paria is a German-based graffiti artist known for blending urban chaos with vibrant emotion.
+      He began tagging walls in the early 2000s and evolved into a respected visual storyteller.
+      His work explores the intersection of street culture, politics, and inner landscapes.
+      Every piece is a declaration, a whisper, a riot.
+    </p>
+  </div>
+
+  <!-- Gallery -->
+  <section id="art" class="bg-white bg-opacity-90 py-16 text-black">
     <div class="container mx-auto px-4">
       <h2 class="graffiti text-3xl text-center text-pink-600 mb-10">Art Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Birds1.jpg" alt="Aurora PariaLys" class="zoomable w-full h-64 object-cover">
+          <img src="images/Birds1.jpg" alt="Aurora PariaLys" class="w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Paria1.jpg" alt="Paria Graffiti Letters" class="zoomable w-full h-64 object-cover">
+          <img src="images/Paria1.jpg" alt="Paria Graffiti Letters" class="w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/INK.jpg" alt="Nature - Inkoqnito" class="zoomable w-full h-64 object-cover">
+          <img src="images/INK.jpg" alt="Nature - Inkoqnito" class="w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Dracula.jpg" alt="Charles Manson" class="zoomable w-full h-64 object-cover">
+          <img src="images/Dracula.jpg" alt="Charles Manson" class="w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Gonzo.jpg" alt="Hunter/Depp/Gonzo" class="zoomable w-full h-64 object-cover">
+          <img src="images/Gonzo.jpg" alt="Hunter/Depp/Gonzo" class="w-full h-64 object-cover">
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Thekingiscute.jpg" alt="The King is Cute" class="zoomable w-full h-64 object-cover">
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Wall1.jpg" alt="Extra Image 1" class="zoomable w-full h-64 object-cover">
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Canvas2.jpg" alt="Extra Image 2" class="zoomable w-full h-64 object-cover">
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/Faces3.jpg" alt="Extra Image 3" class="zoomable w-full h-64 object-cover">
+          <img src="images/Thekingiscute.jpg" alt="The King is Cute" class="w-full h-64 object-cover">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Lightbox container -->
-  <div id="lightbox">
-    <div class="lightbox-controls">
-      <span id="prev">⟨</span>
-      <span id="next">⟩</span>
+  <!-- Contact -->
+  <section id="contact" class="bg-black bg-opacity-90 text-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="graffiti text-3xl text-center text-pink-500 mb-6">Get in Touch</h2>
+      <form class="max-w-xl mx-auto bg-white text-black p-6 rounded shadow-lg space-y-4">
+        <input type="text" placeholder="Name" class="w-full px-4 py-2 border rounded" />
+        <input type="email" placeholder="Email" class="w-full px-4 py-2 border rounded" />
+        <textarea placeholder="Message" class="w-full px-4 py-2 border rounded" rows="4"></textarea>
+        <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded">Send ✉️</button>
+      </form>
     </div>
-    <img id="lightbox-img" src="" alt="Imagine mărită">
-  </div>
-  <!-- Script pentru funcția de mărire și navigare -->
+  </section>
+
+  <footer class="bg-black text-white text-center py-6">
+    <p class="text-sm">&copy; 2025 Jan Paria INK. All rights reserved.</p>
+  </footer>
+
   <script>
-    const zoomableImages = Array.from(document.querySelectorAll('.zoomable'));
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    let currentIndex = 0;
-
-    function showImage(index) {
-      if (index >= 0 && index < zoomableImages.length) {
-        lightboxImg.src = zoomableImages[index].src;
-        lightbox.style.display = 'flex';
-        currentIndex = index;
-      }
+    function toggleJournal() {
+      const journal = document.getElementById('journal');
+      journal.style.display = journal.style.display === 'none' || journal.style.display === '' ? 'block' : 'none';
     }
-
-    zoomableImages.forEach((img, index) => {
-      img.addEventListener('click', () => showImage(index));
-    });
-
-    document.getElementById('next').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showImage((currentIndex + 1) % zoomableImages.length);
-    });
-
-    document.getElementById('prev').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showImage((currentIndex - 1 + zoomableImages.length) % zoomableImages.length);
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-    });
   </script>
 </body>
 </html>
